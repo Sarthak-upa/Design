@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Apply for Job</title>
+   <link rel="stylesheet" href="css/applyforjob.css">
+   <script>
+      function toggleForm(jobTitle) {
+         document.getElementById('job-title').value = jobTitle;
+         document.getElementById('application-form').style.display = 'block';
+      }
+   </script>
+</head>
+<body>
+   <header class="header">
+      <section class="flex">
+         <a href="home.html" class="logo">Company Name</a>
+      </section>
+   </header>
+
+   <section class="apply-job">
+      <h2>Apply for a Job</h2>
+      <div class="row">
+         <div class="job-listings">
+            <div class="job">
+               <h4>Front-End Developer</h4>
+               <p>Looking for a skilled front-end developer with experience in HTML, CSS, and JavaScript.</p>
+               <button class="apply-btn" onclick="toggleForm('Front-End Developer')">Apply Now</button>
+            </div>
+            <div class="job">
+               <h4>Back-End Developer</h4>
+               <p>We need a backend expert proficient in Node.js and databases.</p>
+               <button class="apply-btn" onclick="toggleForm('Back-End Developer')">Apply Now</button>
+            </div>
+            <div class="job">
+               <h4>UI/UX Designer</h4>
+               <p>Creative designer required with knowledge of Figma and Adobe XD.</p>
+               <button class="apply-btn" onclick="toggleForm('UI/UX Designer')">Apply Now</button>
+            </div>
+            <div class="job">
+               <h4>Project Manager</h4>
+               <p>Experienced project manager with Agile and Scrum knowledge.</p>
+               <button class="apply-btn" onclick="toggleForm('Project Manager')">Apply Now</button>
+            </div>
+            <div class="job">
+               <h4>Data Scientist</h4>
+               <p>Looking for a data scientist skilled in Python, R, and machine learning.</p>
+               <button class="apply-btn" onclick="toggleForm('Data Scientist')">Apply Now</button>
+            </div>
+            <div class="job">
+               <h4>DevOps Engineer</h4>
+               <p>Expert in CI/CD pipelines, Kubernetes, and cloud platforms.</p>
+               <button class="apply-btn" onclick="toggleForm('DevOps Engineer')">Apply Now</button>
+            </div>
+            <div class="job">
+               <h4>Cybersecurity Analyst</h4>
+               <p>Security specialist with knowledge of network security and ethical hacking.</p>
+               <button class="apply-btn" onclick="toggleForm('Cybersecurity Analyst')">Apply Now</button>
+            </div>
+            <div class="job">
+               <h4>Mobile App Developer</h4>
+               <p>iOS/Android developer with expertise in Flutter or React Native.</p>
+               <button class="apply-btn" onclick="toggleForm('Mobile App Developer')">Apply Now</button>
+            </div>
+            <div class="job">
+               <h4>Business Analyst</h4>
+               <p>Analyst with experience in market research and business intelligence tools.</p>
+               <button class="apply-btn" onclick="toggleForm('Business Analyst')">Apply Now</button>
+            </div>
+            <div class="job">
+               <h4>Digital Marketing Specialist</h4>
+               <p>SEO and PPC expert with experience in social media marketing.</p>
+               <button class="apply-btn" onclick="toggleForm('Digital Marketing Specialist')">Apply Now</button>
+            </div>
+            <div class="job">
+               <h4>Content Writer</h4>
+               <p>Creative writer skilled in SEO and content marketing strategies.</p>
+               <button class="apply-btn" onclick="toggleForm('Content Writer')">Apply Now</button>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section id="application-form" class="apply-job" style="display: none;">
+      <h2>Job Application Form</h2>
+      <form action="#" method="post" enctype="multipart/form-data">
+         <input type="text" id="job-title" name="job-title" readonly class="box">
+         <input type="text" placeholder="Enter your name" name="name" required class="box">
+         <input type="email" placeholder="Enter your email" name="email" required class="box">
+         <input type="number" placeholder="Enter your phone number" name="phone" required class="box">
+         <textarea name="message" placeholder="Why should we hire you?" required class="box"></textarea>
+         <label for="resume">Upload Resume:</label>
+         <input type="file" name="resume" id="resume" accept=".pdf,.doc,.docx" required class="box">
+         <input type="submit" value="Submit Application" class="apply-btn">
+      </form>
+   </section>
+
+   <footer class="footer">
+      &copy; 2024 Company Name | All Rights Reserved
+   </footer>
+</body>
+</html>
